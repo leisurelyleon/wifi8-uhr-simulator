@@ -41,16 +41,16 @@ graph TD
     class L frontend;
 ```
 
-# Component Breakdown
+## Component Breakdown
 
-## 1. The Machine Learning Precognition Layer (ml_predictor)
+### 1. The Machine Learning Precognition Layer (ml_predictor)
 
 Instead of reacting to packet loss, the system ingests raw RF telemetry to forecast channel utilization. If interference is predicted within the next 5-10 milliseconds, the engine pre-emptively shifts spatial signatures.
 
-## 2. Multi-AP Coordination (ap_coordination)
+### 2. Multi-AP Coordination (ap_coordination)
 
 The core of Wi-Fi 8. This layer allows multiple discrete Access Points to form a unified cluster, delivering Joint Transmissions (JT) to a single client at the exact same microsecond, functionally eliminating dead zones.
 
-## 3. The Hardware Abstraction Bridge (phy_mac)
+### 3. The Hardware Abstraction Bridge (phy_mac)
 
 Handles the ultra-fast switching between standard 6GHz bands and experimental Sub-THz (120GHz+) frequencies. Line-of-sight blockages trigger nanosecond fallbacks to ensure zero dropped frames.
