@@ -21,13 +21,45 @@ The **Wi-Fi 8 UHR Engine** is a full-stack architectural simulation exploring th
 
 ```text
 wifi8-uhr-simulator/
-├── engine/              # C++ Core Simulation
-│   ├── include/         # Header Blueprints
-│   └── src/             # MAPC, ML, and PHY/MAC Logic
-├── dashboard/           # TypeScript/React Visualization
-│   ├── src/             # Components, Services, and UI
-│   └── package.json     # Node Dependencies
-└── docs/                # Extended Mermaid.js Flowcharts
+├── engine/                         # C++ Core Simulation Engine
+│   ├── src/
+│   │   ├── ap_coordination/        # Logic for Multi-AP synchronized packet delivery
+│   │   │   ├── MapcController.cpp
+│   │   │   └── SpatialReuse.cpp
+│   │   ├── ml_predictor/           # Predictive jitter & interference modeling
+│   │   │   ├── InterferenceEngine.cpp
+│   │   │   └── JitterBuffer.cpp
+│   │   ├── phy_mac/                # Simulated 802.11bn MAC layer handling
+│   │   │   ├── SubThzBridge.cpp
+│   │   │   └── FrameAggregator.cpp
+│   │   └── main.cpp                # Engine entry point and WebSocket server
+│   ├── include/                    # C++ Header files
+│   │   ├── ap_coordination.hpp
+│   │   ├── ml_predictor.hpp
+│   │   └── phy_mac.hpp
+│   └── CMakeLists.txt              # C++ Build configuration
+├── dashboard/                      # Web Visualization Dashboard (TS/React)
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── NetworkGraph.tsx    # Visualizes AP nodes and client movement
+│   │   │   ├── PacketLossChart.tsx # Real-time telemetry chart
+│   │   │   └── ControlPanel.tsx    # Toggles to inject interference
+│   │   ├── services/
+│   │   │   └── telemetrySocket.ts  # WebSocket listener for engine data
+│   │   ├── utils/
+│   │   │   └── packetParsers.ts
+│   │   ├── App.tsx
+│   │   └── index.css
+│   ├── package.json
+│   └── tsconfig.json
+├── tests/                          # Automated Testing
+│   ├── engine_tests/               # C++ Catch2/GTest files
+│   └── dashboard_tests/            # Jest/React Testing Library files
+├── docs/
+│   ├── architecture_flow.md        # Mermaid.js flowcharts of the mapc process
+│   └── predictive_models.md        # Explanations of the ML theory used
+├── .gitignore
+└── README.md                       # The master project manifesto
 ```
 
 ## 🛠️ Getting Started
