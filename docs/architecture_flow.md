@@ -14,9 +14,9 @@ graph TD
     classDef frontend fill:#1e1e1e,stroke:#10b981,stroke-width:2px,color:#fff;
 
     %% Components
-    A[Enviornment Telemetry] -->|RF Noise, Utilization| B(ML Interference Engine)
+    A[Environment Telemetry] -->|RF Noise, Utilization| B(ML Interference Engine)
     B -->|Predicted Jitter Delay| C{Jitter Buffer Allocation}
-
+    
     C -->|Normal Ops| D(MAPC Controller)
     C -->|High Jitter| E(Dynamic Buffer Expansion)
     E --> D
@@ -33,7 +33,7 @@ graph TD
 
     %% Dashboard Flow
     B -.->|WebSocket JSON Payload| L[React Dashboard]
-    G _._>|Link Status Payload| L
+    G -.->|Link Status Payload| L
 
     %% Apply Styles
     class B,C,D,E,F engine;
