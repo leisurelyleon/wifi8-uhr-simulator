@@ -15,7 +15,7 @@ graph TD
 
     %% Components
     A[Enviornment Telemetry] -->|RF Noise, Utilization| B(ML Interference Engine)
-    B -->|Predicted Jitter Delay| C{Jitter Buffer Allocation|
+    B -->|Predicted Jitter Delay| C{Jitter Buffer Allocation}
 
     C -->|Normal Ops| D(MAPC Controller)
     C -->|High Jitter| E(Dynamic Buffer Expansion)
