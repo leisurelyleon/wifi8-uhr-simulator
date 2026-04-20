@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* * Deep, dark background with subtle atmospheric gradients 
+     * representing the 6GHz and Sub-THz radio frequencies.
+     */
+    @apply bg-slate-950 text-slate-200 antialiased;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(34, 211, 238, 0.04), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(232, 121, 249, 0.04), transparent 25%);
+  }
+}
+
+@layer components {
+  /* * High-transparency, minimalist aesthetic.
+   * Creating a clear, structured view for complex data.
+   */
+  .glass-panel {
+    @apply bg-slate-900/40 backdrop-blur-md border border-slate-700/50 shadow-2xl;
+  }
+}
+
+/* Custom Scrollbar for a polished, enterprise feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617; 
+}
+::-webkit-scrollbar-thumb {
+  background: #334155; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; 
+}
+
+/* Ensure our SVG animations run smoothly */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .3;
+  }
+}
