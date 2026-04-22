@@ -17,7 +17,7 @@ The **Wi-Fi 8 UHR Engine** is a full-stack architectural simulation exploring th
 * **Sub-THz Hardware Bridging:** Models zero-latency fallback protocols between experimental 120GHz Line-of-Sight links and robust 6GHz baselines.
 * **Coordinated Spatial Reuse (CSR):** Dynamically adjusts BSS Colors and clamping TX power to navigate Overlapping Basic Service Sets (OBSS).
 
-## 📂 Architecture Structure
+## 📂 Master Architecture Structure
 
 ```text
 wifi8-uhr-simulator/
