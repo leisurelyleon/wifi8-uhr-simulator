@@ -1,5 +1,7 @@
 # 📡 IEEE 802.11bn (Wi-Fi 8) UHR Engine
 
+![WiFi 8](https://www.tuttotech.net/wp-content/uploads/2025/07/Wi-Fi-8-concept-Hero-tt.jpg)
+
 ![Status](https://img.shields.io/badge/Status-Predictive_Simulation-0ea5e9?style=for-the-badge)
 ![C++](https://img.shields.io/badge/C++-17-00599C?style=for-the-badge&logo=c%2B%2B)
 ![React](https://img.shields.io/badge/React-18-20232a?style=for-the-badge&logo=react)
